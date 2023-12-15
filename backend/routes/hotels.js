@@ -28,7 +28,7 @@ HotelsRouter.patch('/update/:id', async (req, res) => {
         const foundRecord = await Hotels.findById(id);
 
         if (!foundRecord) {
-            return res.status(404).json({ error: 'Запись не найдена' });
+            return res.status(404).json({ error: 'Запис не знайдений' });
         }
 
         Object.keys(updates).forEach(key => {
@@ -36,7 +36,7 @@ HotelsRouter.patch('/update/:id', async (req, res) => {
         });
 
         await foundRecord.save();
-        res.json({ message: 'Запис успішно оновлена' });
+        res.json({ message: 'Запис успішно оновлений' });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Помилка' });
@@ -71,7 +71,7 @@ HotelsRouter.post('/add', async (req, res) => {
 
         await newHotel.save();
 
-        res.status(201).json({ message: 'Запис успішно добавлено' });
+        res.status(201).json({ message: 'Запис успішно добавлений' });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Помилка' });
