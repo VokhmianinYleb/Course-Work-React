@@ -1,0 +1,18 @@
+.AllCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search {
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+
+    input {
+        outline: none;
+        width: 300px;
+        border: none;
+        border-bottom: 3px solid palevioletred;
+    }
+}
